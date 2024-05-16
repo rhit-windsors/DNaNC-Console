@@ -109,10 +109,11 @@ public static class NodeManager
         {
             byteStore.AddRange(buffer);
             //Check if the EOF is reached
-            if(Encoding.UTF8.GetString(buffer).Contains("EOF"))
+            if(Encoding.UTF8.GetString(buffer).Contains("_EOF"))
             {
                 break;
             }
+            buffer = new byte[1024];
         }
         
         client.Close();
@@ -122,8 +123,11 @@ public static class NodeManager
         fileData = fileData.Replace("\0", "").Replace("_EOF", "");
         var fileBytes = Convert.FromBase64String(fileData);
         
+        //Save in downloads folder
+        var downloadsPath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + Path.DirectorySeparatorChar + "Downloads" + Path.DirectorySeparatorChar;
+        
         //Write the file
-        File.WriteAllBytes(file.FileName, fileBytes);
+        File.WriteAllBytes(downloadsPath + file.FileName, fileBytes);
     }
     
     public static void Join(string host, int port, int localPort)
@@ -157,6 +161,7 @@ public static class NodeManager
     {
         //Turn off the cleanup service
         NodeCleanup.KillCleanup = true;
+        NodeServer.KillServer = true;
         
         //If you are the pred and succ, you are the only node in the network
         if (Predecessor.Id == LocalNode.Id && Successor.Id == LocalNode.Id)

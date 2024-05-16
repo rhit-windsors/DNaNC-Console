@@ -8,6 +8,7 @@ namespace DNaNC_Console.Services;
 
 public static class NodeServer
 {
+    public static bool KillServer = false;
     public static void Listen()
     {
         if (NodeManager.LocalNode == null)
@@ -19,13 +20,14 @@ public static class NodeServer
         //Create TCP listener
         TcpListener listener = new TcpListener(IPAddress.Any, NodeManager.LocalNode.Port);
         listener.Start();
-        while (true)
+        while (!KillServer)
         {
             //Accept the client
             TcpClient client = listener.AcceptTcpClient();
             //Handle the client
             Task.Run(() => HandleClient(client));
         }
+        listener.Stop();
     }
 
     private static void HandleClient(TcpClient client)
@@ -280,10 +282,20 @@ public static class NodeServer
             //Get the file
             var file = FileShare.SharedFiles.FirstOrDefault(f => f.Name.Contains(fileName));
             
-            var messageToSend = Encoding.UTF8.GetBytes(Convert.ToBase64String(File.ReadAllBytes(file.FullName)) + "_EOF");
+            var messageToSend = Encoding.UTF8.GetBytes(Convert.ToBase64String(File.ReadAllBytes(file.FullName)));
             
-            //Send with base64
-            client.Client.Send(messageToSend);
+            //Send the file
+            int totalLength = messageToSend.Length;
+            int bytesSent = 0;
+            while (bytesSent <= totalLength)
+            {
+                if(totalLength - bytesSent < 1024)
+                {
+                    client.Client.Send(messageToSend, bytesSent, totalLength - bytesSent, SocketFlags.None);
+                    break;
+                }
+                bytesSent += client.Client.Send(messageToSend, bytesSent, 1024, SocketFlags.None);
+            }
         }
         
         client.Close();

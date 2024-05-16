@@ -12,3 +12,4 @@ C:\Users\Riley\RiderProjects\DNaNC-Console\DNaNC-Console\obj\Debug\net8.0\refint
 C:\Users\Riley\RiderProjects\DNaNC-Console\DNaNC-Console\obj\Debug\net8.0\DNaNC-Console.pdb
 C:\Users\Riley\RiderProjects\DNaNC-Console\DNaNC-Console\obj\Debug\net8.0\DNaNC-Console.genruntimeconfig.cache
 C:\Users\Riley\RiderProjects\DNaNC-Console\DNaNC-Console\obj\Debug\net8.0\ref\DNaNC-Console.dll
+C:\Users\Riley\RiderProjects\DNaNC-Console\DNaNC-Console\obj\Debug\net8.0\DNaNC-Console.sourcelink.json

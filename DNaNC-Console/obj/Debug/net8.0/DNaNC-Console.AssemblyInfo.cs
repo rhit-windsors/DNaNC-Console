@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DNaNC-Console")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+68d5e0543954763731c0606b3214278a5458bb6c")]
 [assembly: System.Reflection.AssemblyProductAttribute("DNaNC-Console")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DNaNC-Console")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

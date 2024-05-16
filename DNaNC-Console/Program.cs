@@ -70,6 +70,6 @@ while (true)
     if (input.Split(" ")[0] == "get")
     {
         var index = int.Parse(input.Split(" ")[1]);
-        NodeManager.RequestFile(0);
+        NodeManager.RequestFile(index);
     }
 }
