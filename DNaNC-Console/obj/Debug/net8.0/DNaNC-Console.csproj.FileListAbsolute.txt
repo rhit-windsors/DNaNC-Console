@@ -1,0 +1,14 @@
+C:\Users\Riley\RiderProjects\DNaNC-Console\DNaNC-Console\bin\Debug\net8.0\DNaNC-Console.exe
+C:\Users\Riley\RiderProjects\DNaNC-Console\DNaNC-Console\bin\Debug\net8.0\DNaNC-Console.deps.json
+C:\Users\Riley\RiderProjects\DNaNC-Console\DNaNC-Console\bin\Debug\net8.0\DNaNC-Console.runtimeconfig.json
+C:\Users\Riley\RiderProjects\DNaNC-Console\DNaNC-Console\bin\Debug\net8.0\DNaNC-Console.dll
+C:\Users\Riley\RiderProjects\DNaNC-Console\DNaNC-Console\bin\Debug\net8.0\DNaNC-Console.pdb
+C:\Users\Riley\RiderProjects\DNaNC-Console\DNaNC-Console\obj\Debug\net8.0\DNaNC-Console.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Riley\RiderProjects\DNaNC-Console\DNaNC-Console\obj\Debug\net8.0\DNaNC-Console.AssemblyInfoInputs.cache
+C:\Users\Riley\RiderProjects\DNaNC-Console\DNaNC-Console\obj\Debug\net8.0\DNaNC-Console.AssemblyInfo.cs
+C:\Users\Riley\RiderProjects\DNaNC-Console\DNaNC-Console\obj\Debug\net8.0\DNaNC-Console.csproj.CoreCompileInputs.cache
+C:\Users\Riley\RiderProjects\DNaNC-Console\DNaNC-Console\obj\Debug\net8.0\DNaNC-Console.dll
+C:\Users\Riley\RiderProjects\DNaNC-Console\DNaNC-Console\obj\Debug\net8.0\refint\DNaNC-Console.dll
+C:\Users\Riley\RiderProjects\DNaNC-Console\DNaNC-Console\obj\Debug\net8.0\DNaNC-Console.pdb
+C:\Users\Riley\RiderProjects\DNaNC-Console\DNaNC-Console\obj\Debug\net8.0\DNaNC-Console.genruntimeconfig.cache
+C:\Users\Riley\RiderProjects\DNaNC-Console\DNaNC-Console\obj\Debug\net8.0\ref\DNaNC-Console.dll
